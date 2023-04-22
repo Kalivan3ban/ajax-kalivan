@@ -1,0 +1,85 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Kalivan",
+      "sirname": "RiseOfKingdoms",
+      "photo_url": "https://cdn.shopify.com/s/files/1/1017/1921/products/2_720x.jpg?v=1520579493",
+      "balance": "1234"
+    },
+    {
+      "id": 1,
+      "name": "Gitler",
+      "sirname": "RiseOfKingdoms",
+      "photo_url": "https://www.fenzidogsportsacademy.com/media/kunena/attachments/7374/OnyxFeb2005.jpg",
+      "balance": "12345"
+    },
+    {
+      "id": 3,
+      "name": "Stalin",
+      "sirname": "RiseOfKingdoms",
+      "photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flue_gas_desulfurization_unit_EN.svg/290px-Flue_gas_desulfurization_unit_EN.svg.png",
+      "balance": "123456"
+    }
+  ],
+
+  "products":[
+    {
+        "id": 1,
+        "name": "Kievska Rus",
+        "description": "Im manipulator",
+        "price": 1,
+        "autor_id": 1,
+        "photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Location_of_Kyivan_Rus.png/250px-Location_of_Kyivan_Rus.png"
+    },
+
+    {
+        "id": 2,
+        "name": "Evreys",
+        "description": "Gaz camera",
+        "price": 0,
+        "autor_id": 2,
+        "photo_url": "https://lh3.googleusercontent.com/Ghu3t5H4DB1eANKqepXoQpmteOJfwUOb1167TCrRtW_dZI3vwJpo2W8QSs5oND6Wtj9WamHrIhKfMIoLoip4gZG1F4HUmQqcYCaWsw=w367-h550-rw-e30"
+    },
+    {
+        "id": 3,
+        "name": "Gitler",
+        "description": "Rasstrelyat",
+        "price": 1290,
+        "autor_id": 3,
+        "photo_url": "https://www.fenzidogsportsacademy.com/media/kunena/attachments/7374/OnyxFeb2005.jpg"
+    },
+    {
+        "id": 4,
+        "name": "SIte",
+        "description": "java skript",
+        "price": 500006,
+        "autor_id": 2,
+        "photo_url": "https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2023/01/Captura-de-Tela-2023-01-18-as-21.58.24.webp"
+    },
+    {
+        "id": 5,
+        "name": "Stefan",
+        "description": "Nine",
+        "price": 3954,
+        "autor_id": 2,
+        "photo_url": "https://i1.sndcdn.com/artworks-GPy8BMh7VOrol3Oi-Ca0EGA-t500x500.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Meshok Zolota",
+        "description": "Sunduk",
+        "price": 10000000000000000000000000000,
+        "autor_id": 1,
+        "photo_url": "https://s00.yaplakal.com/pics/pics_original/5/7/0/10075.jpg"
+    },
+    {
+        "id": 7,
+        "name": "26 december 1991",
+        "description": "Sami vinovati",
+        "price": -1,
+        "autor_id": 3,
+        "photo_url": "https://ms.detector.media/doc/images/news/13897/i75_ArticleImage_13897.jpg"
+    }
+  ]
+}
