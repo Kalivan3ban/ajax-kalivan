@@ -1,9 +1,12 @@
 let productsGrid = document.getElementById("products-grid");
 let productsArray = [];
-let url = "https://my-json-server.typicode.com/Kalivan3ban/ajax-kalivan";
+let url = "https://kalivan-966f.restdb.io/rest/products";
 let xhr = new XMLHttpRequest();
 
-xhr.open('GET', url + "/products");
+xhr.open('GET', url);
+xhr.setRequestHeader("content-type", "application/json");
+xhr.setRequestHeader("x-apikey", "6468f27a0b60fc42f4e1984b");
+xhr.setRequestHeader("cache-control", "no-cache");
 xhr.responseType = 'json';
 xhr.onload = function(){
     let products = xhr.response
@@ -19,7 +22,7 @@ xhr.onload = function(){
         <p class="product-price">Price: ${p.price}</p>
         <p class-description>Description: ${p.description}</p>
         <a href="userProfile.html?id=${p.autor_id}">Seller profile</a>
-        <button class="el-btn" onclick="addProductToCart(${p.id})">opaopa</button>
+        <button class="el-btn" onclick="addProductToCart('${p._id}')">opaopa</button>
         `;
         productsGrid.appendChild(pElem);
     })
@@ -34,11 +37,16 @@ function openCart() {
 }
 
  let cart = [];
+ if(localStorage.getItem('cart')){
+    cart = JSON.parse(localStorage.getItem('cart'));
+    drawCartProducts();
+}
  function addProductToCart(id){
     let product = productsArray.find(function(p){
-        return p.id == id;
+        return p._id == id;
     });
     cart.push(product);
+    localStorage.setItem("cart", JSON.stringify(cart));
     drawCartProducts();
  }
 
@@ -55,18 +63,24 @@ function drawCartProducts(){
         <p><img src="${p.photo_url}"> ${p.name} | ${p.price}</p>
         <hr>
         `;
-        sum += p.price;
+        console.log(p);
+        sum += Number(p.price);
 
     });
 
-    cartProd.innerHTML =+ `
+    cartProd.innerHTML += `
     <p>Total price: ${sum}</p>
     <button onclick="buyAll()">Buy all</button>
     
     `;
 }
 
+let modal = document.getElementById("myModal");
+
 function buyAll(){
-    cart = [];
-    cartProd.innerHTML = "Money was withdrawed from your card"
+    modal.style.display = "block";
+    // cart = [];
+    // cartProd.innerHTML = "Money was withdrawed from your card"
+    // localStorage.setItem("cart", '[]');
+
 }
